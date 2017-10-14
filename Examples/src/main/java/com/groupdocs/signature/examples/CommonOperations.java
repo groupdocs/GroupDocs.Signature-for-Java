@@ -5,24 +5,24 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 
 import com.groupdocs.signature.config.SignatureConfig;
-import com.groupdocs.signature.domain.CellsSaveFileFormat;
-import com.groupdocs.signature.domain.HorizontalAlignment;
-import com.groupdocs.signature.domain.VerticalAlignment;
+import com.groupdocs.signature.domain.enums.CellsSaveFileFormat;
+import com.groupdocs.signature.domain.enums.HorizontalAlignment;
+import com.groupdocs.signature.domain.enums.VerticalAlignment;
 import com.groupdocs.signature.handler.SignatureHandler;
-import com.groupdocs.signature.options.CellsSaveOptions;
-import com.groupdocs.signature.options.CellsSignTextOptions;
-import com.groupdocs.signature.options.LoadOptions;
 import com.groupdocs.signature.options.OutputType;
-import com.groupdocs.signature.options.PdfSignDigitalOptions;
-import com.groupdocs.signature.options.PdfSignImageOptions;
-import com.groupdocs.signature.options.PdfSignTextOptions;
-import com.groupdocs.signature.options.SaveOptions;
 import com.groupdocs.signature.options.SignOptions;
 import com.groupdocs.signature.options.SignatureOptionsCollection;
+import com.groupdocs.signature.options.digitalsignature.PdfSignDigitalOptions;
+import com.groupdocs.signature.options.imagesignature.PdfSignImageOptions;
+import com.groupdocs.signature.options.loadoptions.LoadOptions;
+import com.groupdocs.signature.options.saveoptions.CellsSaveOptions;
+import com.groupdocs.signature.options.saveoptions.SaveOptions;
+import com.groupdocs.signature.options.textsignature.CellsSignTextOptions;
+import com.groupdocs.signature.options.textsignature.PdfSignTextOptions;
 
 public class CommonOperations {
 
-	public static void getSourceDocFromAbsolutePath(String fileName){
+	public static void getSourceDocFromAbsolutePath(String fileName) throws Exception{
 		//ExStarat:getSourceDocFromAbsolutePath
 		// setup Signature configuration
 		SignatureConfig signConfig = CommonUtilities.getConfiguration(); 
@@ -38,7 +38,7 @@ public class CommonOperations {
 		System.out.println("Signed file path is: " + signedPath);
 		//ExEnd:getSourceDocFromAbsolutePath
 	}
-	public static void getSourceDocFromRelativePath(String fileName){
+	public static void getSourceDocFromRelativePath(String fileName) throws Exception{
 		//ExStart:getSourceDocFromRelativePath
 		// setup Signature configuration
 		SignatureConfig signConfig = CommonUtilities.getConfiguration(); 
@@ -54,7 +54,7 @@ public class CommonOperations {
 		System.out.println("Signed file path is: " + signedPath);
 		//ExEnd:getSourceDocFromRelativePath
 	}
-	public static void getSourceDocFromUri(){
+	public static void getSourceDocFromUri() throws Exception{
 		//ExStart:getSourceDocFromUri
 		// setup Signature configuration
 		SignatureConfig signConfig = CommonUtilities.getConfiguration(); 
@@ -85,7 +85,7 @@ public class CommonOperations {
 		System.out.println("Signed file path is: " + signedPath);
 		//ExEnd:getSourceDocFromStream
 	}
-	public static void passwordProtectedDoc(String fileName){
+	public static void passwordProtectedDoc(String fileName) throws Exception{
 		//ExStart:passwordProtectedDoc
 		// setup Signature configuration
 		SignatureConfig signConfig = CommonUtilities.getConfiguration(); 
@@ -105,7 +105,7 @@ public class CommonOperations {
 		System.out.println("Signed file path is: " + signedPath);
 		//ExEnd:passwordProtectedDoc
 	}
-	public static void signDocWithDifferentFileFormat(String fileName){
+	public static void signDocWithDifferentFileFormat(String fileName) throws Exception{
 		//ExStart:signDocWithDifferentFileFormat
 		// setup Signature configuration
 		SignatureConfig signConfig = CommonUtilities.getConfiguration(); 
@@ -125,7 +125,7 @@ public class CommonOperations {
 		System.out.println("Signed file path is: " + signedPath);
 		//ExEnd:signDocWithDifferentFileFormat
 	}
-	public static void signDocWithDifferentFileName(String fileName){
+	public static void signDocWithDifferentFileName(String fileName) throws Exception{
 		// setup Signature configuration
 		SignatureConfig signConfig = CommonUtilities.getConfiguration(); 
 		// instantiating the conversion handler
