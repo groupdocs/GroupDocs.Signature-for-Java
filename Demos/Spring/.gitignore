@@ -1,0 +1,26 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+.idea/*
+*.iml
+*.ipr
+*.iws
+target/*
+.DS_Store
+vs.bin
+App_Data/*
+node_modules
+src/main/resources/static/*
+!src/main/resources/static/assets/.gitkeep
+node/
+etc/
+package-lock.json
+
+# Local license files (mount or copy at runtime)
+Licenses/*
+!Licenses/.gitkeep
+
+# Local demo documents and signed output (mount or copy at runtime)
+DocumentSamples/**
+!DocumentSamples/.gitkeep
+!DocumentSamples/Output/
+DocumentSamples/Output/**
+!DocumentSamples/Output/.gitkeep

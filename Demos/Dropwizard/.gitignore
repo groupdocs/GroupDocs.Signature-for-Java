@@ -1,0 +1,26 @@
+.idea/*
+*.iml
+*.ipr
+*.iws
+dependency-reduced-pom.xml
+target/*
+.DS_Store
+vs.bin
+App_Data/*
+node_modules
+src/main/resources/assets/*
+!src/main/resources/assets/.gitkeep
+node/
+etc/
+package-lock.json
+
+# Local license files (mount or copy at runtime)
+Licenses/*
+!Licenses/.gitkeep
+
+# Local demo documents and signed output (mount or copy at runtime)
+DocumentSamples/**
+!DocumentSamples/.gitkeep
+!DocumentSamples/Output/
+DocumentSamples/Output/**
+!DocumentSamples/Output/.gitkeep
